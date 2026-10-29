@@ -1,0 +1,88 @@
+.Footer {
+  background-color: var(--primary-color-dark);
+  color: var(--text-color-1);
+  font-size: 16px;
+}
+
+.FooterContent {
+  padding: 60px 20px;
+}
+
+.FooterContent hr {
+  border: none;
+  border-top: 1px solid #ffffff0d;
+  margin: 20px 0;
+}
+
+.FooterTop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.FooterTop ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.FooterLogo img {
+  width: 300px;
+  height: auto;
+}
+
+.FooterGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterGroup h5 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.FooterGroup h6 {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.FooterGroup a {
+  color: var(--text-color-1);
+  text-decoration: none;
+}
+
+.FooterContact a {
+  color: var(--text-color-1);
+  text-decoration: underline;
+}
+
+.FooterCTA {
+  border: 1px solid var(--secondary-color);
+  padding: 12px 20px;
+  color: var(--secondary-color);
+  margin-top: 20px;
+  background: none;
+}
+
+.FooterBottom {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+.FooterBottom a {
+  color: var(--text-color-3);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.FooterBottomDivider {
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff0d;
+}
+
+.FooterBottom > div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}

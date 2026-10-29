@@ -1,0 +1,46 @@
+.Header {
+  width: 100%;
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.HeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.Logo {
+  height: 50px;
+}
+
+.HeaderContent nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.HeaderContent nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.HeaderContent nav ul li a {
+  color: var(--text-color-1);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.HeaderCTA {
+  background-color: var(--secondary-color);
+  color: var(--text-color-1);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 14px;
+}

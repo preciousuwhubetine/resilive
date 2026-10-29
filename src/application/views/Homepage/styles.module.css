@@ -1,0 +1,802 @@
+.Hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  height: max-content;
+  position: relative;
+}
+
+.HeroImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+}
+
+.HeroImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(11, 28, 44, 0.9), transparent);
+}
+
+.HeroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.HeroImageContent {
+  position: absolute;
+  top: 140px;
+  left: 64px;
+  color: var(--accent-color);
+  z-index: 1;
+}
+
+.HeroImageContent h4 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 300;
+}
+
+.HeroImageContent h4:last-child {
+  letter-spacing: 1.3px;
+}
+
+.HeroImageContent h4 span {
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  animation: 'pulse' 3s infinite;
+}
+
+.HeroGrid {
+  background-color: var(--primary-color);
+  background-image: linear-gradient(rgba(217, 243, 90, 0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(217, 243, 90, 0.6) 1px, transparent 1px); background-size: 48px 48px;
+}
+
+.HeroContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(11, 28, 44, 0.949), rgba(11, 28, 44, 0.94), rgba(11, 28, 44, 0.9), transparent);
+}
+
+.HeroContentInner {
+  height: 100%;
+}
+
+.HeroContentLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 200px 20px;
+  gap: 20px;
+  min-height: 100%;
+}
+
+.HeroContentLeft h5 {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  gap: 10px;
+  color: var(--accent-color);
+}
+
+.HeroContentLeft h5 span {
+  width: 25px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.HeroContentLeft h1 {
+  color: white;
+  max-width: 650px;
+}
+
+.HeroContentLeft h1 span {
+  color: var(--secondary-color);
+}
+
+.HeroContentLeft p {
+  color: var(--text-color-1);
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+.HeroContentCTA {
+  display: flex;
+  gap: 20px;
+}
+
+.HeroContentCTA a,
+.HeroContentCTA button {
+  background-color: var(--secondary-color);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  color: var(--text-color-1);
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  height: 60px;
+  width: 180px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroContentCTA a:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid var(--text-color-1);
+  color: white;
+}
+
+.HeroContentCTA a:first-child:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.HeroContentCTA a:nth-child(2):hover {
+  border-color: var(--accent-color);
+  font-size: 14px;
+  transform: scale(1.05);
+  color: var(--accent-color);
+}
+
+.HeroContentDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.HeroContentDetails li {
+  display: flex;
+  flex-direction: column;
+}
+
+.HeroContentDetails li h3 {
+  color: var(--accent-color);
+  font-weight: 400;
+}
+
+.WhyResiliveContent {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.WhyResiliveContentHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+
+.WhyResiliveContentHeader p {
+  color: var(--text-color-1);
+  line-height: 1.5;
+  line-height: 1.8;
+}
+
+.WhyResiliveContentHeader div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.WhyResiliveContentHeader h6 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-color-1);
+}
+
+.WhyResiliveContentHeader h6 span {
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.WhyResilive ul {
+  display: grid;
+  grid-template-columns:  repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.WhyResilive ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid rgb(215, 228, 230);
+  color: var(--text-color-1);
+}
+
+.WhyResilive ul li div {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.WhyResilive ul li h3 {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.WhyResilive ul li p {
+  font-size: 14px;
+}
+
+.Packages {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.PackagesContent {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.PackagesContentHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+
+.PackagesContentHeader p {
+  color: var(--text-color-1);
+  line-height: 1.5;
+  line-height: 1.8;
+}
+
+.PackagesContentHeader div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.PackagesContentHeader h6 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-color-1);
+}
+
+.PackagesContentHeader h6 span {
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.PackagesContentMain {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.PackagesContentSelector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.PackagesContentSelector button {
+  background-color: transparent;
+  border: 1px solid var(--text-color-1);
+  color: var(--text-color-1);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  height: 50px;
+  width: 140px;
+  border-radius: 15px;
+}
+
+.PackagesContentSelector button:not(.PackagesContentSelectorActive):hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.PackagesContentSelector button:hover {
+  transform: translateY(-4px);
+}
+
+.PackagesContentSelector .PackagesContentSelectorActive {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.PackageDetails {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  border-radius: 16px;
+  border: 1px solid #ffffff1a;
+  overflow: hidden;
+}
+
+.PackageDetailsLeft {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(18, 37, 54);
+}
+
+.PackageDetailsLeft ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.PackageDetailsLeft ul li {
+  border-bottom: 1px solid rgb(11, 28, 44);
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.PackageDetailsLeft ul li span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.PackageDetailsLeft ul li p:last-child {
+  color: var(--text-color-1);
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.PackageDetailsRight {
+  padding: 40px;
+  background-color: var(--secondary-color);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.PackageDetailsRight hr {
+  border: 1px solid rgba(11, 28, 44, 0.1);
+}
+
+.PackageDetailsRight p {
+  color: var(--text-color-2);
+}
+
+.PackageDetailsRight ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-color-1);
+}
+
+.PackageDetailsRight ul li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.PackageDetailsRightNote {
+  padding: 20px;
+  background-color: rgba(11, 28, 44, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.PackageDetailsRight button {
+  background-color: var(--primary-color);
+  padding: 16px;
+  color: var(--secondary-color);
+  border: none;
+  margin-top: auto;
+}
+
+.Estimator {
+  background-color: white;
+}
+
+.EstimatorContent {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.EstimatorContentHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+
+.EstimatorContentHeader p {
+  color: var(--text-color-1);
+  line-height: 1.5;
+  line-height: 1.8;
+}
+
+.EstimatorContentHeader div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.EstimatorContentHeader h6 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-color-1);
+}
+
+.EstimatorContentHeader h6 span {
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.EstimatorContentMain {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  border-radius: 16px;
+  border: 1px solid rgb(215, 228, 230);
+  overflow: hidden;
+}
+
+.EstimatorContentMainLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px;
+  background-color: #eef4f6;
+}
+
+.EstimatorCameraSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.EstimatorCameraSelectorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.EstimatorCameraSelectorHeader p  {
+  color: var(--text-color-1);
+  font-size: 11px;
+}
+
+.EstimatorCameraSelector ul {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.EstimatorCameraSelector ul li button {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  border: 1px solid rgb(215, 228, 230);
+  border-radius: 4px;
+  text-align: left;
+  padding: 16px;
+  width: 150px;
+}
+
+.EstimatorCameraSelector ul li button:hover {
+  border-color: var(--accent-color);
+}
+
+.EstimatorCameraSelector ul li button h4 {
+  font-size: 28px;
+}
+
+.EstimatorCameraSelector ul li button p {
+  color: var(--text-color-1);
+}
+
+.EstimatorOptionsGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.EstimatorOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.EstimatorOptions div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.EstimatorOptions div:first-child p {
+  color: var(--text-color-1);
+  font-size: 11px;
+}
+
+.EstimatorOptions select {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgb(215, 228, 230);
+  border-radius: 16px;
+  font-size: 14px;
+  color: var(--text-color-1);
+}
+
+.EstimatorInput {
+  background-color: white;
+  align-items: center;
+  color: var(--text-color-1);
+  font-size: 14px;
+  padding: 16px;
+  display: grid;
+  border-radius: 16px;
+  overflow: hidden;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  border: 1px solid rgb(215, 228, 230);
+}
+
+.EstimatorInput input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0;
+}
+
+.EstimatorContentMainRight {
+  padding: 40px;
+  background-color: var(--primary-color);
+  color: var(--text-color-1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.EstimatorContentMainRight button {
+  background-color: var(--secondary-color);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.EstimatorContentMainRight button svg {
+  height: 20px;
+  width: 20px;
+}
+
+.EstimatorContentMainRight hr {
+  border: 1px solid #ffffff1a;
+}
+
+.EstimatorContentMainRightHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.EstimatorContentMainRightHeader h6 {
+  color: var(--accent-color);
+}
+
+.EstimatorContentMainRightHeader p {
+  font-size: 14px;
+}
+
+.EstimatorContentMainRightDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.EstimatorContentMainRightDetails li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.EstimatorContentMainRightDetails li p {
+  color: var(--text-color-1);
+  font-size: 14px;
+}
+
+.EstimatorContentMainRightDetails li p:last-child {
+  font-family: monospace;
+  color: white;
+}
+
+.EstimatorContentMainRightTotal {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.EstimatorContentMainRightTotal h2 {
+  color: var(--secondary-color);
+}
+
+.EstimatorContentMainRightTotal p {
+  font-size: 14px;
+}
+
+
+.AddOnsContent {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.AddOnsContentHeader div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.AddOnsContentHeader h6 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-color-1);
+}
+
+.AddOnsContentHeader h6 span {
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.AddOnsContentMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.AddOnsContentMain > li {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid rgb(215, 228, 230);
+  color: var(--text-color-1);
+  font-size: 14px;
+}
+
+.AddOnsContentMain li h4,
+.AddOnsContentMain li h5 {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.AddOnsContentMain li div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+}
+
+.AddOnsContentMain li div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgb(215, 228, 230);
+}
+
+.AddOnsContentMainOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.AddOnsContentMainOptions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AddOnsContentMainOptions li p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.AddOnsContentMainOptions li p:last-child {
+  font-family: monospace;
+  color: var(--primary-color);
+}
+
+.AddOnsContentMainOptions li p span {
+  background-color: #5ee4df33;
+  color: var(--primary-color);
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+.CTACard {
+  padding: 80px 0 20px;
+}
+
+.CTACardContent {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--primary-color-medium);
+  border-radius: 16px;
+  padding: 80px 60px;
+  color: var(--text-color-1);
+  margin: 0 40px;
+}
+
+.CTACardContentLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.CTACardContentLeft h2 {
+  color: white;
+  max-width: 800px;
+  font-size: 40px;
+}
+
+.CTACardContent button {
+  background-color: var(--secondary-color);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.CTACardContent button svg {
+  height: 20px;
+  width: 20px;
+}
